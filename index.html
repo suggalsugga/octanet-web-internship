@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+
+<style>
+body {
+         color: white;
+         margin: 0px;
+         padding: 0px;
+         background: url('b.jfif');
+ 
+     }
+ 
+     .left {
+         position: absolute;
+         display: inline-block;
+         /* border: 2px solid red; */
+         left: 8px;
+         margin: 13px 0px;
+     }
+ 
+     .left img {
+         width: 100px;
+     }
+ 
+     .left div {
+         text-align: center;
+         line-height: 16px;
+         font-size: 19px;
+     }
+ 
+     .mid {
+         display: block;
+         /* border: 2px solid green; */
+         margin: 13px auto;
+         width: 50%;
+         margin-top: 4px;
+ 
+     }
+ 
+     .right {
+         position: absolute;
+         right: 34px;
+         top: 10px;
+        
+         font-size: 2vw;
+         margin: 14px 0px;
+     }
+     .right i{
+         margin-right: 5px;
+         gap: 20px;
+     }
+     #menu{
+         display: none;
+     }
+ .right button{
+         padding: 5px;
+ }
+
+     .navbar {
+         display: inline-block;
+         
+     }
+     #active{
+        text-decoration: none;
+     }
+     .navbar a{
+text-decoration: none;
+     }
+     .navbar a::after{
+        content:"";
+        width:0;
+        height: 6px;
+        display: block;
+        transition:all 0.4s;
+        border-radius: 30px;
+        background-color:yellow;
+        }
+        .navbar a:hover::after{
+                 width: 100%;
+        }
+ 
+     .navbar li {
+         display: inline-block;
+         font-size: 18px;
+     }
+ 
+     .navbar li a {
+         color: white;
+         padding: 2px 20px;
+         justify-content: center;
+         float: left;
+     }
+ 
+     .navbar li a :hover {
+         text-decoration: none;
+     }
+ 
+     .navbar li a:hover,
+     .navbar li a.active {
+         text-decoration: underline;
+     }
+ 
+     .btn {
+         margin: 2px;
+         width: 79px;
+         padding: 2px;
+         border: 45px grey;
+         border-radius: 17px;
+         background-color: white;
+         cursor: pointer;
+     }
+ 
+     .container {
+         /* border: 1px solid yellow; */
+         margin: 73px 280px;
+         padding: 44px 132px;
+         width: 326px;
+         border-radius: 31px;
+         font-size: 11px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+ 
+     .container h1 {
+         text-align: center;
+     }
+ 
+     .container button {
+         display: block;
+         margin: 15px auto;
+         width: 90%;
+         font-size: 21px;
+         background-color:green;
+     }
+ 
+     .form-group input {
+         text-align: center;
+         padding: 10px;
+         width: 272px;
+         margin: 13px;
+         display: block;
+         font-size: 14px;
+     }
+
+/* For Tablets and Small Desktops */
+@media screen and (max-width: 1024px) {
+   .header{
+    display: flex;
+   }
+    .left img {
+        width: 80px;
+    }
+    #menu{
+         display: block;
+         color: red;
+    }
+
+    .navbar li {
+        font-size: 16px;
+    }
+
+    .navbar li a {
+        padding: 2px 15px;
+    }
+
+    .container {
+        width: 70%;
+        padding: 30px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+
+    .container button {
+        font-size: 18px;
+    }
+}
+
+/* For Mobile Devices (Portrait) */
+@media screen and (max-width: 768px) {
+   .header{
+         display: flex;
+         justify-content: space-between;
+   }
+         .left {
+        position: relative;
+        left: 0;
+        margin: 10px 0;
+    }
+
+    
+
+    .mid {
+         display: none;
+        width: 100%;
+    }
+
+    .right {
+         /* display: none; */
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .right i{
+         /* color: aliceblue; */
+         display: none;
+    }
+    #menu{
+         display: block;
+         color: red;
+         font-size: 5vw;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 50px auto;
+        padding: 30px;
+        font-size: 14px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .form-group input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .container button {
+        font-size: 28px;
+        margin-left: 19px;
+    }
+}
+
+/* For Very Small Mobile Devices (Portrait) */
+@media screen and (max-width: 480px) {
+    .header{
+         display: flex;
+justify-content: space-between;
+}
+         .left img {
+        width: 70px;
+    }
+
+    .navbar li {
+        font-size: 14px;
+    }
+    
+    #menu{
+         display: block;
+         color: aqua;
+         font-size: 10vw;
+    }
+
+    .container {
+        width: 95%;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 18px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    
+    .container button {
+         font-size: 28px;
+         margin-left: 18px;
+     }
+  
+}
+</style>
+<body>
+<div id="main">
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="a.jfif" alt="">
+            <div>Sazid fittness</div>
+        </div>
+
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" id="active">Home</a></li>
+                <li><a href="#" id="active">About us</a></li>
+                <li><a href="#" id="active">Fitness caluculter</a></li>
+                <li><a href="#" id="active">Contact us</a></li>
+            </ul>
+        </div>
+        <!-- right box for buttons -->
+
+        <div class="right">
+            <i id="i" class="ri-instagram-line"></i>
+            <i id="f" class="ri-facebook-line"></i>
+            <i id="menu" class="ri-menu-line"></i>
+        </div>
+    </header>
+    <div class="container">
+        <h1>JOIN THE BEST GYM OF GORAKHPUR</h1>
+        <form action="no.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your city">
+            </div>
+            <button class="btn">Submit now</button>
+        </form>
+    </div>
+</div>
+    
+</body>
+
+</html>
